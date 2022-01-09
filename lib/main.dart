@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
-            children: [
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
               CircleAvatar(
                 radius: 50,
                 backgroundImage: AssetImage('Images/Mathavan.jpg'),
@@ -40,23 +41,24 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 3,
                 ),
               ),
-              Container(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(
-                  vertical: 20,
-                  horizontal: 20,
+              SizedBox(
+                height: 20,
+                width: 250,
+                child: Divider(
+                  color: Color(0xffb2dfdb),
                 ),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: [
-                    Icon(
+              ),
+              Card(
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 25,
+                  ),
+                  child: ListTile(
+                    leading: Icon(
                       Icons.phone,
                       color: Colors.teal,
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
+                    title: Text(
                       '+91 - 8489117766',
                       style: TextStyle(
                         fontFamily: 'Source Sans Pro',
@@ -64,27 +66,19 @@ class MyApp extends StatelessWidget {
                         color: Colors.teal,
                         fontWeight: FontWeight.bold,
                       ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(
-                  vertical: 5,
-                  horizontal: 20,
-                ),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: [
-                    Icon(
+                    ),
+                  )),
+              Card(
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 25,
+                  ),
+                  child: ListTile(
+                    leading: Icon(
                       Icons.email,
                       color: Colors.teal,
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
+                    title: Text(
                       'mmathavan32@outlook.com',
                       style: TextStyle(
                         fontFamily: 'Source Sans Pro',
@@ -92,10 +86,8 @@ class MyApp extends StatelessWidget {
                         color: Colors.teal,
                         fontWeight: FontWeight.bold,
                       ),
-                    )
-                  ],
-                ),
-              ),
+                    ),
+                  )),
             ],
           ),
         ),
